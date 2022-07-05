@@ -11,7 +11,7 @@ function Timer() {
 	useEffect(() => {
 		const timer = setInterval(() => {
 			setMinutes(minutes + 1);
-		}, 5000);
+		}, 60000);
 		return () => clearInterval(timer);
 	}, [minutes]);
 
