@@ -20,6 +20,18 @@ const store = create(
           set(state => ({
             taskList: state.taskList.filter(t => t.id !== taskId)
           }), false, 'deleteTask');
+        },
+        taskToUpdate: null,
+        setTaskToUpdate: task => {
+          set(state => ({
+            taskToUpdate: task
+          }), false, 'setTaskToUpdate');
+        },
+        taskToTrack: null,
+        setTaskToTrack: task => {
+          set(state => ({
+            taskToTrack: task
+          }), false, 'setTaskToTrack');
         }
       }),
       {
